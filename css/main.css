@@ -17,37 +17,80 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  margin: 8px;
-  text-align: center;
+img {
+  width: 100%;
   display: block;
+  padding: .09rem;
+}
+
+img:nth-child(2n) {
+  display: none;
 }
 
 @media only screen and (min-width: 25em) {
 
   img {
+    width: 50%;
     display: inline-block;
-    text-align: center;
+    padding: 0 .05rem;
+
   }
+
+  img:nth-child(2n) {
+    display: inline-block;
+    float: right;
+  }
+
+  body {
+    align-items: center;
+  }
+
 
 }
 
 @media only screen and (min-width: 38em) {
 
   img {
-    display: inline-block;
-    text-align: center;
+    width: 33.3333%;
+  }
+
+  img:first-child {
+    display: none;
+  }
+
+  body {
+    display: flex;
   }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-  img {
+  img:first-child {
     display: inline-block;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: left;
-    vertical-align: middle;
   }
+
+  img {
+    width: 24.8%;
+    padding: 0 .05rem;
+  }
+
+  body {
+    display: flex;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+img {
+  width: 25%;
+}
+
+body {
+  margin-top: .5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+}
